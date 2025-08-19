@@ -1,3 +1,0 @@
-include ':app', ':models', ':progressmanager', ':flowlayout-lib'
-include ':annotations'
-include ':processor'
