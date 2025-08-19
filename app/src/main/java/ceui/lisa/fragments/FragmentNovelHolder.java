@@ -234,8 +234,10 @@ public class FragmentNovelHolder extends BaseFragment<FragmentNovelHolderBinding
             baseBind.description.setVisibility(View.VISIBLE);
             baseBind.description.setHtml(mNovelBean.getCaption());
         }
-        baseBind.howManyWord.setText(String.format(Locale.getDefault(), "%d字", mNovelBean.getText_length()));
-        baseBind.publishTime.setText(Common.getLocalYYYYMMDDHHMMString(mNovelBean.getCreate_date()));
+baseBind.howManyWord.setText(String.format(Locale.getDefault(), "%d字\n%s", 
+    mNovelBean.getText_length(), 
+    Common.getLocalYYYYMMDDHHMMString(mNovelBean.getCreate_date())
+));
         baseBind.viewCount.setText(String.valueOf(mNovelBean.getTotal_view()));
         baseBind.bookmarkCount.setText(String.valueOf(mNovelBean.getTotal_bookmarks()));
         baseBind.comment.setOnClickListener(new View.OnClickListener() {

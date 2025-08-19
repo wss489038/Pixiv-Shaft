@@ -90,8 +90,14 @@ public class NAdapter extends BaseAdapter<NovelBean, RecyNovelBinding> {
             }
         });
         bindView.baseBind.author.setText(target.getUser().getName());
-        var date = target.getCreate_date().substring(0, 10);
-        bindView.baseBind.howManyWord.setText(String.format(Locale.getDefault(), "%d字\n%s", target.getText_length(),date));
+        String dateTimeStr = target.getCreate_date(); // 原始日期时间字符串
+        String datePart = dateTimeStr.substring(0, 10);  // "2024-06-01"
+        String timePart = dateTimeStr.substring(11, 16); // "14:30"
+
+        bindView.baseBind.howManyWord.setText(
+            String.format(Locale.getDefault(), "%d字\n%s\n%s",
+                target.getText_length(), datePart, timePart)
+        );
         bindView.baseBind.bookmarkCount.setText(String.valueOf(target.getTotal_bookmarks()));
         Glide.with(mContext).load(GlideUtil.getUrl(target.getImage_urls().getMaxImage())).into(bindView.baseBind.cover);
         Glide.with(mContext).load(GlideUtil.getHead(target.getUser())).into(bindView.baseBind.userHead);
