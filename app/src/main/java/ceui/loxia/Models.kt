@@ -146,7 +146,7 @@ data class Illust(
     val page_count: Int = 0,
     val restrict: Int? = null,
     val sanity_level: Int? = null,
-    val series: Any? = null,
+    val series: Series? = null,
     val tags: List<Tag>? = null,
     val title: String? = null,
     val tools: List<String>? = null,
@@ -486,6 +486,10 @@ data class SingleIllustResponse(
     val illust: Illust? = null,
 ) : Serializable
 
+data class SingleNovelResponse(
+    val novel: Novel? = null,
+) : Serializable
+
 data class GifInfoResponse(
     val illustId: Long,
     val ugoira_metadata: UgoiraMetaData? = null,
@@ -771,6 +775,21 @@ data class NovelSeriesResp(
 ) : Parcelable, KListShow<Novel> {
     override val displayList: List<Novel>
         get() = novels ?: listOf()
+    override val nextPageUrl: String?
+        get() = next_url
+}
+
+
+@Parcelize
+data class IllustSeriesResp(
+    val illust_series_detail: NovelSeriesDetail? = null,
+    val illust_series_first_illust: Illust? = null,
+    val illust_series_latest_illust: Illust? = null,
+    val illusts: List<Illust>? = null,
+    val next_url: String? = null
+) : Parcelable, KListShow<Illust> {
+    override val displayList: List<Illust>
+        get() = illusts ?: listOf()
     override val nextPageUrl: String?
         get() = next_url
 }

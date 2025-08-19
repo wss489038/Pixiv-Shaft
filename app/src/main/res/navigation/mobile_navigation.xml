@@ -140,6 +140,10 @@
         <argument
             android:name="object_id"
             app:argType="long" />
+
+        <argument
+            android:name="object_type"
+            app:argType="string" />
     </fragment>
 
     <fragment
@@ -173,6 +177,16 @@
             app:argType="long" />
     </fragment>
 
+
+    <fragment
+        android:id="@+id/navigation_illust_series"
+        android:name="ceui.pixiv.ui.detail.IllustSeriesFragment"
+        tools:layout="@layout/fragment_pixiv_list" >
+
+        <argument
+            android:name="series_id"
+            app:argType="long" />
+    </fragment>
 
 
     <fragment
@@ -256,6 +270,12 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="@null"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_following_created_novel"
+        android:name="ceui.pixiv.ui.user.FollowingCreatedNovelFragment" >
+
     </fragment>
 
     <fragment
