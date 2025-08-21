@@ -195,8 +195,8 @@
                         <TextView
                             android:id="@+id/how_many_word"
                             android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            android:gravity="center_vertical"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
                             android:includeFontPadding="false"
                             android:text=""
                             android:textColor="@color/white_to_gray"
@@ -208,7 +208,7 @@
                         <ImageView
                             android:layout_width="@dimen/sixteen_dp"
                             android:layout_height="@dimen/sixteen_dp"
-                            android:layout_gravity="bottom|center_vertical"
+                            android:layout_gravity="bottom"
                             android:layout_marginStart="@dimen/six_dp"
                             android:src="@drawable/ic_remove_red_eye_black_24dp"
                             app:tint="@color/white_to_gray" />
@@ -216,16 +216,16 @@
                         <TextView
                             android:id="@+id/view_count"
                             android:layout_width="wrap_content"
-                            android:layout_height="17dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/four_dp"
-                            android:gravity="bottom|center_vertical"
+                            android:gravity="bottom" 
                             android:text=""
                             android:textColor="@color/white_to_gray" />
 
                         <ImageView
                             android:layout_width="@dimen/sixteen_dp"
                             android:layout_height="@dimen/sixteen_dp"
-                            android:layout_gravity="bottom|center_vertical"
+                            android:layout_gravity="bottom"
                             android:layout_marginStart="@dimen/six_dp"
                             android:src="@drawable/ic_favorite_black_24dp"
                             app:tint="@color/white_to_gray" />
@@ -235,7 +235,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/four_dp"
-                            android:gravity="bottom|center_vertical"
+                            android:gravity="bottom"
                             android:text=""
                             android:textColor="@color/white_to_gray" />
 
@@ -244,7 +244,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="bottom|center_vertical|end"
+                            android:gravity="bottom|end"
                             android:text="@string/string_109"
                             android:textColor="@color/white_to_gray" />
 
